@@ -20,10 +20,7 @@ install(show_locals=True)
 LOG_FORMAT = "%(message)s"
 CONSOLE = Console()
 logging.basicConfig(
-    level="INFO",
-    format=LOG_FORMAT,
-    datefmt="[%X] ",
-    handlers=[RichHandler(rich_tracebacks=True, console=CONSOLE)],
+    level="INFO", format=LOG_FORMAT, datefmt="[%X] ", handlers=[RichHandler(rich_tracebacks=True, console=CONSOLE)]
 )
 LOGGER = logging.getLogger(__name__)
 
@@ -89,11 +86,7 @@ def search_for_lookalikes(url: URL) -> list[Lookalike]:
 
             for row in rows:
                 if row["title"] is not None:
-                    title_str = (
-                        row["title"]
-                        if len(row["title"]) <= 32
-                        else row["title"][:32] + "..."
-                    )
+                    title_str = row["title"] if len(row["title"]) <= 32 else row["title"][:32] + "..."
                 else:
                     title_str = "none"
 

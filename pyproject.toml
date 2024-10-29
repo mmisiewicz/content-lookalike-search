@@ -15,7 +15,7 @@ dependencies = [
 
 [tool.black]
 line-length = 120
-target-version = ['py312']
+target-version = ["py312"]
 
 [tool.isort]
 lines_between_types = 1
