@@ -1,0 +1,27 @@
+[project]
+name = "content-lookalike-search"
+version = "0.1.0"
+description = "Simple streamlit app to run queries against mctxl database"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "psycopg-binary>=3.2.3",
+    "psycopg>=3.2.3",
+    "rich>=13.9.3",
+    "streamlit>=1.39.0",
+    "yarl>=1.17.0",
+]
+
+
+[tool.black]
+line-length = 120
+target-version = ['py312']
+
+[tool.isort]
+lines_between_types = 1
+profile = "black"
+line_length = 120
+
+[tool.ruff]
+line-length = 120
+
