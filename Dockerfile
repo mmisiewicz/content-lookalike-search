@@ -27,6 +27,4 @@ RUN /usr/local/bin/uv sync
 # ENV USER=MIKE
 # ENV PGPASS=Secret123
 
-ENTRYPOINT [ "streamlit", "run", "/app/app.py" ] 
-
-EXPOSE 8501
+CMD [ "streamlit", "run", "/app/app.py" ] 
